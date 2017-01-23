@@ -7,12 +7,12 @@
 			scope: {},
 			require: 'compBillsTable',
 			controllerAs: 'billsTable',
-			templateUrl: '/src/compBillsTable.html',
+			templateUrl: 'src/compBillsTable.html',
 			controller: function($scope, $http) {
 				var ctrl = this;
 
 				ctrl.init = function() {
-					$http.get('/data/printedBils.json')
+					$http.get('data/printedBils.json')
 					.then(function(response) {
 						ctrl.data = response.data;
 					});
