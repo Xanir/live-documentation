@@ -1,0 +1,31 @@
+<div ng-if="billsTable.data">
+	<table class="billsTable">
+		<thead>
+			<tr>
+				<th>Year</th>
+				<th>$1</th>
+				<th>$2</th>
+				<th>$5</th>
+				<th>$10</th>
+				<th>$20</th>
+				<th>$50</th>
+				<th>$100</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="row in billsTable.data | orderBy:'FY'">
+				<td>{{::row.FY}}</td>
+				<td>{{::row['$1'] | number}}</td>
+				<td>{{::row['$2'] | number}}</td>
+				<td>{{::row['$5'] | number}}</td>
+				<td>{{::row['$10'] | number}}</td>
+				<td>{{::row['$20'] | number}}</td>
+				<td>{{::row['$50'] | number}}</td>
+				<td>{{::row['$100'] | number}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div ng-if="!billsTable.data">
+	<span>Loading ...</span>
+</div>
