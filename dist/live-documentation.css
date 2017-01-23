@@ -5,7 +5,6 @@
   text-align: center;
   font-size: 1.5em;
   font-weight: 600;
-  border-bottom: 1px solid lightgray;
 }
 .billsTable > tbody > tr > td {
   text-align: right;
@@ -13,5 +12,5 @@
 }
 .billsTable > thead > tr > th,
 .billsTable > tbody > tr > td {
-  padding: .3em;
+  padding: .4em;
 }
